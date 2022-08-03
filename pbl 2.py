@@ -5,6 +5,9 @@ Spyder Editor
 This is a temporary script file.
 """
 
+import numpy
+import matplotlib
+
 def fact(n):
     output = 1
     for term in range(1, n+1):
@@ -12,7 +15,15 @@ def fact(n):
     return output
 
 def exptaylor(n,x):
-    output = 1
-    for term in range(1,n+1):
+    output = 0
+    for term in range(0,n+1):
         output += 1/fact(term)*x**term
+    return output
+
+def betterexp(n,x):
+    output = 1
+    term = 1
+    for i in range(1,n+1):
+        term *= x/i
+        output += term
     return output
