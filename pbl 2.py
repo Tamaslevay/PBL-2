@@ -31,5 +31,6 @@ def betterexp(n,x):
 xinput = np.linspace(-2,1,30)
 youtput = betterexp(50,xinput)
 
-plt.plot(xinput,youtput)
+plt.plot(xinput,youtput, linestyle='dashdot')
+plt.plot(xinput,np.exp(xinput), linestyle='dotted')
 
