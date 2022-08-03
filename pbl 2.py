@@ -5,8 +5,8 @@ Spyder Editor
 This is a temporary script file.
 """
 
-import numpy
-import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
 
 def fact(n):
     output = 1
@@ -27,3 +27,9 @@ def betterexp(n,x):
         term *= x/i
         output += term
     return output
+
+xinput = np.linspace(-2,1,30)
+youtput = betterexp(50,xinput)
+
+plt.plot(xinput,youtput)
+
